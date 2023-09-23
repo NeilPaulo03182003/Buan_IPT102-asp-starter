@@ -1,0 +1,40 @@
+﻿@model Buan_CivilianInfoModel[]
+
+@{
+    ViewData["Title"] = "Civilial Records";
+}
+
+<h1>Civilian Records</h1>
+
+<div class="CivilianTable1">
+
+    <table class="table table-hover table-striped table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">LastName</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">MiddleName</th>
+                <th scope="col">HomeAddress</th>
+                <th scope="col">PhoneNumber</th>
+            </tr>
+        </thead>
+     <tbody>
+            @foreach (var CivilianInf in Model)
+            {
+                <tr>
+                    <td>@CivilianInf.LastName</td>
+                    <td>@CivilianInf.FirstName</td>
+                    <td>@CivilianInf.MiddleName</td>
+                    <td>@CivilianInf.HomeAddress</td>
+                    <td>@CivilianInf.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="align-center">Every Information Kept Here Are Safe And Confidential</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
